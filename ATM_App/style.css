@@ -1,0 +1,15 @@
+body{
+    margin: 0 auto;
+    background: url('img/istockphoto-497944862-1024x1024.jpg')
+}
+
+.content_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content_wrapper img {
+    width: 150vh;
+}
