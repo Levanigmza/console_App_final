@@ -144,14 +144,10 @@ window.onload = function () {
 
         /////  ბალანსის შემოწმების ფუნქცია,   პარამეტრი - იუზერ აიდი
         function checkBalance(user) {
-            for (let i = 0; i < userData.length; i++) {
-                if (userData[i][0] === user) {
-                    return userData[i][3];
-                }
-            }
-            return "შეცდომა, მომხარებელი არ მოიძებნა";
+            const userBalance = userData.find(userInfo => userInfo[0] === user)?.[3];
+            return userBalance !== undefined ? userBalance : "შეცდომა, მომხარებელი არ მოიძებნა";
         }
-
+        
 
         ///// თანხის შეტანის ფუნქცია
         function deposit(current_balance, user) {
